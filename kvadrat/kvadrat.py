@@ -116,6 +116,27 @@ def kit():
     plt.grid(True)
     plt.show()
 def oski():
+    x1=np.arange(-9,-1,0.5)
+    y1=(-1/16)*(x1+5)**2+2
+    x2=np.arange(1,9,0.5)
+    y2=(-1/16)*(x2-5)**2+2
+    x3=np.arange(-9,-1,0.5)
+    y3=1/4*(x3+5)**2-3
+    x4=np.arange(1,9,0.5)
+    y4=1/4*(x4-5)**2-3
+    x5=np.arange(-9,-6,0.5)
+    y5=-(x5+7)**2+5
+    x6=np.arange(6,9,0.5)
+    y6=-(x6-7)**2+5
+    x7=np.arange(-1,1,0.5)
+    y7=(-0.5)*x7*x7+1.5
+    fig = plt.figure()
+    plt.plot(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6,x7,y7)
+    plt.title('oski')
+    plt.ylabel('y')
+    plt.xlabel('x')
+    plt.grid(True)
+    plt.show()
 
 
 
@@ -145,7 +166,7 @@ lbl4=Label(aken,width=25,text="Решение",font=("Arial Bold",20),fg="green"
 lbl5=Button(aken,width=5,text="График",font="Arial 20",fg="Black",bg="yellow")
 btn_veel=Button(aken,width=15,text="Увеличеть окно",font="Arial 20",fg="Black",bg="yellow")
 var=StringVar()
-r1=Radiobutton(aken,text="Очки",variable=var,)
+r1=Radiobutton(aken,text="Очки",variable=var,command=oski)
 r2=Radiobutton(aken,text="Зонтик",variable=var)
 r3=Radiobutton(aken,text="Кит",variable=var,command=kit)
 
